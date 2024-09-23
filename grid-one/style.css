@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80rem;
+  display: grid;
+  grid-template-columns: 10rem 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10rem 1fr 1fr 1fr 1fr 1fr 10rem;
+  grid-template-areas:
+    'header header header header header'
+    'hero hero main-content main-content main-content'
+    'hero hero main-content main-content main-content'
+    'sidebar sidebar main-content main-content main-content'
+    'sidebar sidebar extra-content extra-content extra-content'
+    'related-images related-images related-images related-posts related-posts'
+    'footer footer footer footer footer';
+}
+
+.container > div {
+  font-size: 4rem;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.header {
+  grid-area: header;
+  background-color: pink;
+}
+
+.hero {
+  grid-area: hero;
+  background-color: greenyellow;
+  grid-row: 2/4;
+}
+
+.main-content {
+  grid-area: main-content;
+  background-color: palevioletred;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: seagreen;
+}
+
+.extra-content {
+  grid-area: extra-content;
+  background-color: grey;
+}
+
+.related-content {
+  grid-area: related-content;
+  background-color: green;
+}
+
+.related-images {
+  grid-area: related-images;
+  background-color: darkgreen;
+}
+
+.related-posts {
+  grid-area: related-posts;
+  background-color: pink;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: yellow;
+}
